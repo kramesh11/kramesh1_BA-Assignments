@@ -1,0 +1,45 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+\---
+title: "BA 09\25"
+author: "karthikeyan ramesh"
+date: "2022-09-25"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Scatterplot for sales and budget
+```{r}
+library(ISLR)
+data<- Carseats
+print(Carseats)
+
+plot(Carseats$Sales, Carseats$Price, main = "Scatterplot for sales and budget", xlab = "Sales", ylab = "budget",abline(Carseats$Sales,Carseats$Price))
+barplot(Carseats$Price)
+```
+
+#maximum value attribute of advertisements
+```{r}
+max(Carseats$Advertising)
+```
+
+#summary of carseats
+```{r}
+summary(data)
+```
+
+#Interquartile range of carseats price
+```{r}
+IQR(Carseats$Price)
+```
+
